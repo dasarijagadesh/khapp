@@ -1,0 +1,160 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 txt-center bg-dark">
+                <div class="d-flex justify-content-center mt-4">
+                    <img src="assets/images/login.png" alt="" class="wd-50 mt-20 mb-15">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <section class="">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+
+                <div class="col-md-12 col-xs-12 col-sm-12 pd-0">
+
+                    <div class="pd-15 card p-rel height-368 bg-shadow">
+                        <!-- <div>
+                            <h5 class="cl-vio">School App</h5>
+                            <p class="p-font">Makers Mind School</p>
+                        </div> -->
+                        <div>
+                            <h5 class="text-center sign-h6-color">
+                                Sign-Up
+                            </h5>
+                        </div>
+                        <section class="scrool">
+                            <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+
+                                <div class="form-group pd-t-10">
+                                    <label for="name" class="fs-14 ds-blk cl-vio">Full Name</label>
+                                    <div class="">
+                                        <input formControlName="name" id="name" type="text"
+                                            placeholder="Enter your Full name" class="bd-0 border-bottoms">
+                                        <div *ngIf="f['name'].touched && f['name'].invalid" class="red">
+                                            <div *ngIf="f['name'].errors && f['name'].errors['required']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Name is required.</p>
+                                            </div>
+                                            <div *ngIf="f['name'].errors && f['name'].errors['minlength']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Name should
+                                                    be 5 character.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group pd-t-10">
+                                    <label for="num" class="fs-14 ds-blk cl-vio">Number</label>
+
+                                    <div class="">
+                                        <input formControlName="num" id="num" type="tel"
+                                            placeholder="Enter your Phone Number" class="bd-0 border-bottoms ipt-sty">
+                                        <div *ngIf="f['num'].touched && f['num'].invalid" class="red">
+                                            <div *ngIf="f['num'].errors && f['num'].errors['required']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Number is required.</p>
+                                            </div>
+                                            <div *ngIf="f['num'].errors && f['num'].errors['minlength']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Name should
+                                                    be 10 character.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group pd-t-10">
+                                    <label for="email" class="fs-14 ds-blk cl-vio">Email</label>
+
+                                    <div class="">
+                                        <input formControlName="email" id="email" type="text"
+                                            placeholder="Enter your email Address" class="bd-0 border-bottoms  ipt-sty"
+                                            required>
+                                        <div *ngIf="f['email'].touched && f['email'].invalid" class="red">
+                                            <div *ngIf="f['email'].errors && f['email'].errors['required']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Email is required.</p>
+                                            </div>
+                                            <div *ngIf="f['email'].errors && f['email'].errors['email']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Please, enter
+                                                    valid email
+                                                    address.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group pd-t-10">
+                                    <label for="password" class="fs-14 cl-vio">Password</label>
+                                    <div class="aft">
+                                        <input formControlName="password" id="password" type="password"
+                                            placeholder="Enter your new password" class="bd-0 bd-b ipt-sty bef"
+                                            required>
+
+                                        <div *ngIf="f['password'].touched && f['password'].invalid" class="red">
+                                            <div *ngIf="f['password'].errors && f['password'].errors['required']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">Password is required.</p>
+                                            </div>
+                                            <div *ngIf="f['password'].errors && f['password'].errors['password']"><span
+                                                    style="color:red">*</span>
+                                                <p class="nm_req">password should
+                                                    be 6 character</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group pd-t-10">
+                                    <label for="confirm_password" class="fs-14 cl-vio">Confirm Password</label>
+
+                                    <div class="aft">
+                                        <input formControlName="confirm_password" id="confirm_password" type="password"
+                                            placeholder="Enter your new password" class="bd-0 bd-b ipt-sty bef"
+                                            required>
+                                        <div *ngIf="f['confirm_password'].touched && f['confirm_password'].invalid"
+                                            class="red">
+                                            <div
+                                                *ngIf="f['confirm_password'].errors && f['confirm_password'].errors['required']">
+                                                <span style="color:red">*</span>
+                                                <p class="nm_req">confirm Password is required.</p>
+                                            </div>
+                                            <div
+                                                *ngIf="f['confirm_password'].errors && f['confirm_password'].errors['confirm_password']">
+                                                <span style="color:red">*</span>
+                                                <p class="nm_req">Password does not match</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <a href=""><button class="lgn-btn" [disabled]="form.invalid" type="submit">
+                                            Sign-Up
+                                        </button>
+                                    </a>
+                                </div>
+                                <div>
+                                    <p>{{this.form.value | json}}</p>
+                                    <p>{{this.form.status | json}}</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="fs-14">i'm already a member<a class="pl-2 color-sign-in"
+                                            href="sign-in.html">Sign-in</a></p>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</section>

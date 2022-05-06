@@ -1,0 +1,104 @@
+<section class="mb-44">
+    <div class="container-fluid mt-4 mb-2">
+        <div class="justify-content-between d-flex">
+            <div class="d-flex">
+                <a routerLink="/" class="notifi-arrow mr-2"> <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <h4 class="main_trm">Paid Version
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 mb-4">
+            <div class="row">
+                <h5 class="head-aptitude mt-2">List of Topics: </h5>
+                <div class="col-md-12">
+                    <div class="card text-center topic-card mb-2" data-aos="flip-up" data-aos-duration="3000"
+                        *ngFor="let data of subcat">
+                        <h5 class="pl=2 text-center">
+                            {{data.sub_cat_name}}
+                        </h5>
+                        <div class="d-flex flex-page">
+                            <div class="mt-10">
+                                <a routerLink="/subscription/{{data.sub_cat_id}}"><button class="btn-sub">Subscribe
+                                        Now</button></a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- <div class="card text-center topic-card mb-2" data-aos="flip-down" data-aos-duration="2000">
+                        <h5 class="pl=2 ">Compound Interest</h5>
+                        <div class="d-flex flex-page">
+                            <div>
+                                <p>(1 to 30 pages)</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card text-center topic-card mb-2" data-aos="flip-up" data-aos-duration="3000">
+                        <h5 class="pl=2 ">Simple Interests</h5>
+                        <div class="d-flex flex-page">
+                            <div>
+                                <p>(1 to 30 pages)</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card text-center topic-card mb-2" data-aos="flip-down" data-aos-duration="2000">
+                        <h5 class="pl=2 ">Problems on Trains</h5>
+                        <div class="d-flex flex-page">
+                            <div>
+                                <p>(1 to 30 pages)</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card text-center topic-card mb-2" data-aos="flip-up" data-aos-duration="3000">
+                        <h5 class="pl=2 ">Profit and Loss</h5>
+                        <div class="d-flex flex-page">
+                            <div>
+                                <p>(1 to 30 pages)</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card text-center topic-card" data-aos="flip-down" data-aos-duration="2000">
+                        <h5 class="pl=2 ">Square Root and Cube Root</h5>
+                        <div class="d-flex flex-page">
+                            <div>
+                                <p>(1 to 30 pages)</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</section>

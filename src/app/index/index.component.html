@@ -1,0 +1,50 @@
+<section class="mt-45">
+    <owl-carousel-o [options]="customOptions">
+
+
+        <ng-template carouselSlide>
+            <div class="owl-slide" style="background-image: url(assets/images/Education.png);"></div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="owl-slide2" style="background-image: url(assets/images/child2.jpg);"></div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div class="owl-slide3" style="background-image: url(assets/images/child3.jpg);"></div>
+        </ng-template>
+        <!-- <ng-template carouselSlide>
+            <div class="owl-slide" style="background-image: url(assets/images/Education.png);"></div>
+        </ng-template> -->
+
+
+    </owl-carousel-o>
+</section>
+
+
+<!-- <div><i class="flaticon-next"></i></div> -->
+<!-- /////////////////////////// -->
+
+<!-- ///////////cards///////////// -->
+<section class="">
+    <div>
+        <h5 class="pb-2 heading-every hme-hd" id="library">Subjects</h5>
+    </div>
+    <div class="container mt-2 mb-2 ">
+        <div class="d-flex justify-content-between">
+
+
+        </div>
+
+        <div class="row  text-center pt-2 pb-2">
+            <div class="col-6 mb-12" *ngFor="let data of categorycall">
+                <div class="card  contain-cards" data-aos="flip-left" data-aos-duration="2000">
+                    <a routerLink="/aptitude/{{data.cat_id}}">
+                        <img src="http://localhost/khacademy/admin/uploads/category/{{data.cat_img}}" alt="">
+                        <h6>
+                            {{data.cat_name}}
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

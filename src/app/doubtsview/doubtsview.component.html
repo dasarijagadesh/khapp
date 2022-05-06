@@ -1,0 +1,33 @@
+<section class="mb-44">
+    <div class="container mt-4 mb-2 width-90 ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <a routerLink="/" class="notifi-arrow mr-2"> <i class="fas fa-arrow-left"></i></a>
+
+                        <a routerLink="/" class="prehd">Previous Doubts</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-xs-12 col-sm-12 pd-0">
+                <div>
+                    <div class="box-dvie" *ngFor="let data of datacall">
+                        <h3 class="stat_hed"><span class="tit_v">Subject:</span>&nbsp;{{data.sub_name}}
+                        </h3>
+                        <h4 class="stat_hed">
+                            <span class="tit_v">Topic:</span>&nbsp;{{data.top_name}}
+                        </h4>
+                        <p class="cnt-ans"><span class="tit_ans">Ans:</span>&nbsp;{{data.answer}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

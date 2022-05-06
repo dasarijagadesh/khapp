@@ -1,0 +1,74 @@
+<section class="mb-44">
+    <div class="container mt-4 mb-2 width-90 ">
+        <div class="row">
+            <div class=" d-flex">
+                <div class="d-flex text-left">
+                    <a routerLink="/" class="notifi-arrow mr-2"> <i class="fas fa-arrow-left"></i></a>
+
+                    <h5 class="heading-every">{{categorycall[0].cat_name}}</h5>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row mt-2 mb-2">
+            <div class="col-md-6 pt-2 pb-2">
+                <div class="card cd-ver" data-aos="fade-right" data-aos-duration="2000">
+                    <h5 class="cd-ver-h">Free version</h5>
+                    <p class="pa-ft"><i class="fas fa-arrow-right"></i>{{ (categorycall[0].topic.length>100)? (categorycall[0].topic | slice:0:100)+'..':(categorycall[0].topic) }}</p>
+                    <!-- {{categorycall[0].topic}} -->
+                   
+                </div>
+            </div>
+            <div class="col-md-6 pt-2 pb-2">
+                <div class="button-ap">
+                    <div class="cd-ver" data-aos="fade-left" data-aos-duration="2000">
+                        <h5 class="cd-ver-h clr-b">Paid version</h5>
+                        <p class="clr-b pa-ft"><i class="fas fa-arrow-right pr-2"></i> Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing
+                            elit...</p>
+                        <p class="clr-b pa-ft"><i class="fas fa-arrow-right pr-2"></i> Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing
+                            elit...</p>
+                        <marquee behavior="" direction="" class="mrq-cd">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit...</marquee>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+
+            <div class="col-md-12 ">
+                <ul class="nav nav-pills mb-3 ul-aptitude button-ap" id="pills-tab" role="tablist">
+
+                    <li class="" role="">
+                        <a class="nav-link  active-aptitude" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                            role="tab" aria-controls="pills-home" aria-selected="true">Free
+                            version</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a routerLink="/paidversion/{{categorycall[0].cat_id}}" class="brd-rds">Paid version</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade tabs-p mt-4" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <h5 class="head-aptitude">{{categorycall[0].cat_name}}</h5>
+                        <p>{{categorycall[0].topic}}</p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="container mt-100">
+    <div class="row">
+        <div class="col-12">
+                <div class="content-modal pdl">
+                    <h5 class="modal-title subcrip-h" id="exampleModalLabel">Subscrption</h5>
+                </div>
+                <div class="mt-20">
+                    <div class="body-modal">
+                        <div class="card card-s" id="3months" (click)="hiddenfilling()">
+                            <h6 class="plan-heading">3 Months</h6>
+                            <h4>&#8377; 300</h4>
+                        </div> <!--  -->
+                        <div class="card card-s" id="6months">
+                            <h6 class="plan-heading">6 Months</h6>
+                            <h4>&#8377; 300</h4>
+                        </div>
+                        <div class="card card-s" id="12months"  >
+                            <h6 class="plan-heading">12 Months</h6>
+                            <h4>&#8377; 300</h4>
+                        </div>
+                    </div>
+                    <form [formGroup]="subscriptionForm">
+                        <input type="hidden" formControlName="months">
+                        <input type="hidden" formControlName="priceval">
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>
